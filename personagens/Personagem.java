@@ -10,7 +10,7 @@ public abstract class Personagem {
         public Personagem(String nome, int hpMaximo, int ataque, int defesa) {
             this.nome = nome;
             this.hpMaximo = hpMaximo;
-            this.hpAtual = hpMaximo; // A vida atual começa igual à máxima [cite: 151-152, 156]
+            this.hpAtual = hpMaximo;
             this.ataque = ataque;
             this.defesa = defesa;
         }
