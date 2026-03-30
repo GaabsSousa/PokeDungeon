@@ -32,7 +32,20 @@ public abstract class Personagem {
     }
 
     public String barraDeHp() {
-        return this.nome + " HP: " + this.hpAtual + "/" + this.hpMaximo;
+        int tamanhoBarra = 20;
+        String barraVida = "[ ";
+
+        int preenchido = (int) (((double) this.hpAtual / this.hpMaximo) * tamanhoBarra);
+
+        for (int c = 0; c < preenchido; c++) {
+            barraVida += "█";
+        }
+
+        for (int c = 0; c < (tamanhoBarra - preenchido); c++) {
+            barraVida += "░";
+        }
+
+        return barraVida + " ] " + this.hpAtual + "/" + this.hpMaximo;
     }
 
     public String getNome() {return nome;}
